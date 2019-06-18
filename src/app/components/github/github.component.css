@@ -1,0 +1,24 @@
+form{
+    padding-top:23px;
+}
+
+::ng-deep.list-group-item{
+    border: none!important;
+}
+
+#panelClass{
+    background: white;
+}
+
+span{
+    padding-left: 20px;
+}
+
+button{
+    float:right;
+    margin-right:5%;
+}
+
+.panel-default{
+    padding: 5%;
+}
