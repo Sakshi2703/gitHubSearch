@@ -15,27 +15,33 @@ export class GithubComponent  {
   showRepo:boolean = false;
   showDet:boolean = true;
   hideDet:boolean = false;
+  p:number =1;
+  users:any;
+  userDetail;
+  togglePanel: any = {};
   constructor(private _githubService:GithubService){
       console.log('Github Component Init...');   
   }
   
-  showDetails(){
-    this.showRepo = true;
-    this.showDet= false;
+  showDetails(i){
+    this.showDet = false;
+    this.togglePanel[i] = true;
     this.hideDet = true;
-  }
+      
+      }
+    
+      hideDetails(i){
+      this.hideDet = false;
+      this.togglePanel[i] = false;
+      this.showDet = true;
+      }
 
-  hideDetails(){
-    this.showRepo = false;
-    this.showDet= true;
-    this.hideDet = false;
-  }
   search(){
       this._githubService.updateUsername(this.username);
       
       this._githubService.getUser().subscribe(user => {
-          //console.log(user);
-          this.user = user;
+        this.users = user;
+        this.userDetail  = user.items;
       });
       
       this._githubService.getRepos().subscribe(repos => {
