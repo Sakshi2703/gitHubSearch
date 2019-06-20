@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+form{
+    padding-top:23px;
+}
+
+::ng-deep.list-group-item{
+    border: none!important;
+}
+
+#panelClass{
+    background: white;
+}
+
+span{
+    padding-left: 20px;
+}
+
+button{
+    margin-top:5%;
+    float:right;
+    margin-right:5%;
+}
+
+.panel-default{
+    padding: 5%;
+}
