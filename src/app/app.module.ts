@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {FormsModule} from '@angular/forms';
 import { GithubComponent } from './components/github/github.component';
+import {NgxPaginationModule} from 'ngx-pagination'; // <-- import the module
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { GithubComponent } from './components/github/github.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

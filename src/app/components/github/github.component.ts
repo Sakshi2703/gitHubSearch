@@ -41,7 +41,7 @@ export class GithubComponent  {
       
       this._githubService.getUser().subscribe(user => {
         this.users = user;
-        this.userDetail  = user.items;
+        this.userDetail  = this.users.items;
       });
       
       this._githubService.getRepos().subscribe(repos => {
